@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y \
     && pecl install redis xdebug \
     && docker-php-ext-enable redis xdebug \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install bcmath gd gettext mysqli opcache pdo_mysql zip \
+    && docker-php-ext-install bcmath gd gettext intl mysqli opcache pdo_mysql zip \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
